@@ -2,6 +2,8 @@
 <html lang="es">
 
 <head>
+    <link rel="icon" href="../imagen/favicon.ico" type="image/x-icon">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encargos Especiales | Delicius Pizza</title>
@@ -17,41 +19,33 @@
 </head>
 
 <body>
-    <!-- SIDEBAR NAVIGATION -->
-    <aside class="sidebar" id="sidebar">
-        <div class="sidebar-logo">
+        <header class="glass-header">
+        <div class="logo">
             <h1><i class="fa-solid fa-pizza-slice"></i> Delicius <span>Pizza</span></h1>
         </div>
-        <nav class="sidebar-nav">
+        <nav>
             <ul>
-                <li><a href="../index.html" id="nav-inicio"><i class="fa-solid fa-house"></i> Inicio</a></li>
-                <li><a href="menu.html" id="nav-menu"><i class="fa-solid fa-utensils"></i> Menú</a></li>
-                <li><a href="pizzas.html" id="nav-pizzas"><i class="fa-solid fa-pizza-slice"></i> Pizzas</a></li>
-                <li><a href="bebidas.html" id="nav-bebidas"><i class="fa-solid fa-wine-glass"></i> Bebidas</a></li>
-                <li><a href="nosotros.html" id="nav-nosotros"><i class="fa-solid fa-users"></i> Nosotros</a></li>
-                <li><a href="resenas.html" id="nav-resenas"><i class="fa-solid fa-star"></i> Reseñas</a></li>
-                <li><a href="creadores.html" id="nav-creadores"><i class="fa-solid fa-code"></i> Creadores</a></li>
-                <li><a href="index.html#contacto" id="nav-contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="pizzas.html">Pizzas</a></li>
+                <li><a href="bebidas.html">Bebidas</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="resenas.html">Reseñas</a></li>
+                <li><a href="creadores.html">Creadores</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
             </ul>
         </nav>
-        <div class="sidebar-bottom">
-            <div class="sidebar-cart" id="cart-icon" aria-label="Ver carrito">
-                <div class="sidebar-cart-icon">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span class="cart-count" id="cart-count">0</span>
-                </div>
-                <span>Tu Pedido</span>
+        <div class="header-actions">
+            <div class="cart-icon" id="cart-icon" aria-label="Ver carrito">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count" id="cart-count">0</span>
             </div>
-            <a href="menu.html" class="btn-sidebar-order"><i class="fa-solid fa-fire"></i> Pedir Ahora</a>
+            <button class="btn-primary desktop-btn" onclick="window.location.href='menu.html'">Pedir Ahora</button>
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
         </div>
-    </aside>
-    <!-- Mobile toggle -->
-    <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Abrir menú"><i class="fa-solid fa-bars"></i></button>
-    <div class="sidebar-overlay" id="sidebar-overlay"></div>
-    <!-- PAGE WRAPPER -->
-    <div class="page-wrapper">
+    </header>
 
-    <main style="padding-top: 2rem;">
+    <main style="padding-top: 100px;">
         <section id="menu" class="menu-section" style="background-color: var(--bg-dark);">
             <div class="section-title">
                 <h2>Encargos Especiales</h2>
@@ -162,24 +156,9 @@
     <div id="toast-container" class="toast-container"></div>
     <!-- Custom JS -->
     <script src="../js/main.js"></script>
-    </div><!-- end .page-wrapper -->
-    <!-- Sidebar JS -->
-    <script>
-        const sidebarToggle = document.getElementById('sidebar-toggle');
-        const sidebar = document.getElementById('sidebar');
-        const sidebarOverlay = document.getElementById('sidebar-overlay');
-        if (sidebarToggle) {
-            sidebarToggle.addEventListener('click', () => {
-                sidebar.classList.toggle('open');
-                sidebarOverlay.classList.toggle('active');
-            });
-            sidebarOverlay.addEventListener('click', () => {
-                sidebar.classList.remove('open');
-                sidebarOverlay.classList.remove('active');
-            });
-        }
-    </script>
-<script>var el=document.getElementById('nav-menu');if(el)el.classList.add('active');</script>
+    
+    
+
 </body>
 
 </html>
